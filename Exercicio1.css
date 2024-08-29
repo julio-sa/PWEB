@@ -53,9 +53,9 @@ section{
 aside{
     background-color: blueviolet;
     color: blanchedalmond;
-    padding: 20px;
+    padding: 30px;
     margin: 20px 0;
-    float: right;
+    float: left;
     width: 25%;
 }
 
