@@ -48,8 +48,8 @@ h3 {
 #logo_img {
     margin-right: 10px;
     border-radius: 50%;
-    width: 70px;
-    height: 50px;
+    width: 150px;
+    height: 70px;margin-top: 10px;
 }
 
 .logo {
@@ -96,6 +96,16 @@ h3 {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 body {
