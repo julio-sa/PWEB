@@ -1,0 +1,233 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #09bc00;
+    color: #fff;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav ul li a.menu-link {
+    font-family: 'Your desired font', sans-serif;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #f05f40;
+}
+
+.fontes {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.fontes:hover {
+    border: 3px solid orange;
+}
+
+h3 {
+    margin-left: 10px;
+    margin-top: 0;
+    font-size: large;
+    color: antiquewhite;
+}
+
+#logo_img {
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 70px;
+    height: 50px;
+}
+
+.logo {
+    align-items: center;
+    text-align: center;
+}
+
+.menu_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.search-container {
+    margin-top: 10px;
+    width: 306px;
+    height: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.search-input,
+.search-button {
+    flex: 1;
+    border: none;
+    padding: 10px;
+}
+
+.search-button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #DDDDDD;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: rgb(0, 163, 65);
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+
+.container-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.noticia {
+    width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.noticia-titulo {
+    color: black;
+}
+
+.noticia-titulo:hover {
+    color: orange;
+}
+
+
+#servicos {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 350px;
+    text-align: center;
+}
+
+#servicos h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#servicos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#servicos li {
+    margin-bottom: 5px;
+}
+
+#nossa-historia {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: justify;
+    margin-top: 750px;
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+#nossa-historia h2 {
+    margin-bottom: 10px;
+}
+
+#nossa-historia p {
+    margin-bottom: 10px;
+}
+
+p a {
+    color: black;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#contato {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    margin-top: 700px;
+}
+
+#contato h2 {
+    margin-bottom: 10px;
+}
+
+#contato p {
+    margin-bottom: 5px;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2dfa0da5;
+    padding: 20px;
+}
