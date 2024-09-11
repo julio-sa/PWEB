@@ -1,4 +1,4 @@
-div {
+.mudacor {
     height: 500px;
     width: 500px;
     text-align: center;
@@ -6,7 +6,7 @@ div {
 
 /* Até 420px */
 @media (max-width: 420px) {
-    div {
+    .mudacor {
         color: white;
         background-color: #000;
         /* Azul escuro */
@@ -15,7 +15,7 @@ div {
 
 /* De 421px até 768px */
 @media (min-width: 421px) and (max-width: 768px) {
-    div {
+    .mudacor {
         color: white;
         background-color: orange;
     }
@@ -23,7 +23,7 @@ div {
 
 /* De 769px até 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
-    div {
+    .mudacor {
         color: #000;
         /* Azul escuro */
         background-color: pink;
@@ -32,7 +32,7 @@ div {
 
 /* De 1025px até 1080px */
 @media (min-width: 1025px) and (max-width: 1080px) {
-    div {
+    .mudacor {
         color: #000;
         /* Azul escuro */
         background-color: red;
@@ -41,7 +41,7 @@ div {
 
 /* De 1081px até 1366px */
 @media (min-width: 1081px) and (max-width: 1366px) {
-    div {
+    .mudacor {
         color: lightgreen;
         background-color: purple;
     }
@@ -49,7 +49,7 @@ div {
 
 /* De 1367px até 1920px */
 @media (min-width: 1367px) and (max-width: 1920px) {
-    div {
+    .mudacor {
         color: darkgreen;
         background-color: yellow;
     }
@@ -57,7 +57,7 @@ div {
 
 /* Acima de 1920px */
 @media (min-width: 1921px) {
-    div {
+    .mudacor {
         color: white;
         background-color: #005e11;
         /* Azul escuro */
