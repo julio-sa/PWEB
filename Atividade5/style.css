@@ -1,0 +1,65 @@
+.mudacor {
+    height: 500px;
+    width: 500px;
+    text-align: center;
+}
+
+/* Até 420px */
+@media (max-width: 420px) {
+    .mudacor {
+        color: white;
+        background-color: #000;
+        /* Azul escuro */
+    }
+}
+
+/* De 421px até 768px */
+@media (min-width: 421px) and (max-width: 768px) {
+    .mudacor {
+        color: white;
+        background-color: orange;
+    }
+}
+
+/* De 769px até 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mudacor {
+        color: #000;
+        /* Azul escuro */
+        background-color: pink;
+    }
+}
+
+/* De 1025px até 1080px */
+@media (min-width: 1025px) and (max-width: 1080px) {
+    .mudacor {
+        color: #000;
+        /* Azul escuro */
+        background-color: red;
+    }
+}
+
+/* De 1081px até 1366px */
+@media (min-width: 1081px) and (max-width: 1366px) {
+    .mudacor {
+        color: lightgreen;
+        background-color: purple;
+    }
+}
+
+/* De 1367px até 1920px */
+@media (min-width: 1367px) and (max-width: 1920px) {
+    .mudacor {
+        color: darkgreen;
+        background-color: yellow;
+    }
+}
+
+/* Acima de 1920px */
+@media (min-width: 1921px) {
+    .mudacor {
+        color: white;
+        background-color: #005e11;
+        /* Azul escuro */
+    }
+}
