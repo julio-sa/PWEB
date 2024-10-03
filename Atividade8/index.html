@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Avaliação de Filmes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pesquisa de Avaliação de Filmes</h1>
+        </div>
+        <div class="main-content">
+            <div class="poster">
+                <img src="poster.jpeg" alt="Cartaz do Filme" id="poster">
+                <div id="nome-filme">Deadpool e Wolverine</div> <!-- Nome do filme estilizado -->
+            </div>
+            <div id="resultado">
+                <button onclick="pesquisa()">Iniciar Pesquisa</button>
+                <p id="mensagem"></p>
+                <p id="qtdPessimo"></p>
+                <p id="prcntPessimo"></p>
+                <p id="qtdOtimoBom"></p>
+                <p id="prcntOtimoBom"></p>
+                <p id="maisVelho"></p>
+                <p id="maisNovo"></p>
+                <p id="qtdMasc"></p>
+                <p id="qtdFem"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function pesquisa() {
+            // Lógica da pesquisa aqui...
+
+            // Após concluir a pesquisa, exibir os campos
+            document.getElementById('resultado').classList.add('resultado-visible');
+        }
+    </script>
+</body>
+</html>

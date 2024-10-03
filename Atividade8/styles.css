@@ -1,0 +1,118 @@
+/* Nome do filme */
+#nome-filme {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Ocultar os campos de resultado até a pesquisa ser concluída */
+#resultado p {
+    display: none; /* Oculta os campos por padrão */
+}
+
+/* Quando a pesquisa for concluída, os campos serão mostrados */
+.resultado-visible p {
+    display: block;
+}
+
+/* Estilização global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faixa superior com título */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Área de conteúdo principal */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Estilização do cartaz */
+.poster img {
+    width: 300px;
+    height: auto;
+    border: 2px solid #000; /* Borda preta fina */
+    border-radius: 4px;
+}
+
+/* Botão para iniciar a pesquisa */
+button {
+    padding: 12px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilização da área de resultado */
+#resultado {
+    margin-left: 20px;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#resultado p {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    color: #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização geral para manter a responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #resultado {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .poster img {
+        margin-bottom: 20px;
+    }
+}

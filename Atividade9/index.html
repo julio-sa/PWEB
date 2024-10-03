@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executar Funções</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="maiorNum.js"></script>
+    <script src="crescente.js"></script>
+    <script src="palindromo.js"></script>
+    <script src="isTriangle.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha a função para executar</h1>
+        <select id="functionSelect">
+            <option value="maiorNum">Maior Número</option>
+            <option value="crescente">Ordem Crescente</option>
+            <option value="palindromo">Verificar Palíndromo</option>
+            <option value="isTriangle">Verificar Triângulo</option>
+        </select>
+        <button id="executeBtn">Executar Função</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        document.getElementById("executeBtn").addEventListener("click", function() {
+            var selectedFunction = document.getElementById("functionSelect").value;
+            var result;
+            
+            if (selectedFunction === "maiorNum") {
+                result = maiorNum();
+            } else if (selectedFunction === "crescente") {
+                result = crescente();
+            } else if (selectedFunction === "palindromo") {
+                result = palindromo();
+            } else if (selectedFunction === "isTriangle") {
+                result = isTriangle();
+            }
+            
+            document.getElementById("result").innerText = result;
+        });
+    </script>
+</body>
+</html>
