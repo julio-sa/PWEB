@@ -1,0 +1,35 @@
+HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+
+<body>
+    <script>   
+
+        var funcionario1 = new Object();
+        funcionario1.matricula = "20226";
+        funcionario1.nome = "Gabriel"
+        funcionario1.funcao = "Estagiário";
+        alert(`Nome: ${funcionario1.nome} \nMatricula: ${funcionario1.matricula} \nFunção: ${funcionario1.funcao}`);
+
+        var funcionario2 = {};
+        funcionario2["Matricula"] = "20222";
+        funcionario2["Nome"] = "Erica";
+        funcionario2["Função"] = "Estagiário sênior";
+        alert(`Nome: ${funcionario2.Nome} \nMatricula: ${funcionario2.Matricula} \nFunção: ${funcionario2.Função}`);
+
+        var funcionario3 = {
+            matricula: "20221",
+            nome: "Vinicius",
+            funcao: "Estagiário zelador"
+        };
+        alert(`Nome: ${funcionario3.nome} \nMatricula: ${funcionario3.matricula} \nFunção: ${funcionario3.funcao}`);
+    </script>
+</body>
+
+</html>
