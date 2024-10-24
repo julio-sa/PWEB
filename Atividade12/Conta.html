@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe Conta - Exemplo de Herança</title>
+</head>
+<body>
+    <h1>Classe Conta - Herança com Corrente e Poupança</h1>
+
+    <h2>Dados da Conta</h2>
+    <form id="contaForm">
+        <label for="nome">Nome do Correntista:</label>
+        <input type="text" id="nome" required><br><br>
+
+        <label for="banco">Banco:</label>
+        <input type="text" id="banco" required><br><br>
+
+        <label for="numero">Número da Conta:</label>
+        <input type="text" id="numero" required><br><br>
+
+        <label for="saldo">Saldo:</label>
+        <input type="number" id="saldo" required><br><br>
+
+        <div id="campoCorrente">
+            <h3>Conta Corrente</h3>
+            <label for="saldoEspecial">Saldo Especial:</label>
+            <input type="number" id="saldoEspecial"><br><br>
+        </div>
+
+        <div id="campoPoupanca">
+            <h3>Conta Poupança</h3>
+            <label for="juros">Juros (%):</label>
+            <input type="number" id="juros"><br><br>
+
+            <label for="dataVencimento">Data de Vencimento:</label>
+            <input type="date" id="dataVencimento"><br><br>
+        </div>
+
+        <button type="button" onclick="criarContaCorrente()">Criar Conta Corrente</button>
+        <button type="button" onclick="criarContaPoupanca()">Criar Conta Poupança</button>
+        <button type="button" onclick="limparCampos()">Limpar Campos</button>
+    </form>
+
+    <h2>Dados da Conta Criada</h2>
+    <p id="resultado"></p>
+
+    <script>
+        // Classe base Conta
+        class Conta {
+            constructor(nome, banco, numero, saldo) {
+                this.nome = nome;
+                this.banco = banco;
+                this.numero = numero;
+                this.saldo = saldo;
+            }
+
+            get getNome() {
+                return this.nome;
+            }
+
+            set setNome(nome) {
+                this.nome = nome;
+            }
+
+            get getBanco() {
+                return this.banco;
+            }
+
+            set setBanco(banco) {
+                this.banco = banco;
+            }
+
+            get getNumero() {
+                return this.numero;
+            }
+
+            set setNumero(numero) {
+                this.numero = numero;
+            }
+
+            get getSaldo() {
+                return this.saldo;
+            }
+
+            set setSaldo(saldo) {
+                this.saldo = saldo;
+            }
+
+            mostrarDados() {
+                return `Nome: ${this.nome}, Banco: ${this.banco}, Número: ${this.numero}, Saldo: ${this.saldo}`;
+            }
+        }
+
+        // Classe derivada Corrente
+        class Corrente extends Conta {
+            constructor(nome, banco, numero, saldo, saldoEspecial) {
+                super(nome, banco, numero, saldo);
+                this.saldoEspecial = saldoEspecial;
+            }
+
+            get getSaldoEspecial() {
+                return this.saldoEspecial;
+            }
+
+            set setSaldoEspecial(saldoEspecial) {
+                this.saldoEspecial = saldoEspecial;
+            }
+
+            mostrarDados() {
+                return `${super.mostrarDados()}, Saldo Especial: ${this.saldoEspecial}`;
+            }
+        }
+
+        // Classe derivada Poupanca
+        class Poupanca extends Conta {
+            constructor(nome, banco, numero, saldo, juros, dataVencimento) {
+                super(nome, banco, numero, saldo);
+                this.juros = juros;
+                this.dataVencimento = dataVencimento;
+            }
+
+            get getJuros() {
+                return this.juros;
+            }
+
+            set setJuros(juros) {
+                this.juros = juros;
+            }
+
+            get getDataVencimento() {
+                return this.dataVencimento;
+            }
+
+            set setDataVencimento(dataVencimento) {
+                this.dataVencimento = dataVencimento;
+            }
+
+            mostrarDados() {
+                return `${super.mostrarDados()}, Juros: ${this.juros}%, Data de Vencimento: ${this.dataVencimento}`;
+            }
+        }
+
+        // Função para criar uma conta corrente e mostrar os dados na tela
+        function criarContaCorrente() {
+            const nome = document.getElementById("nome").value;
+            const banco = document.getElementById("banco").value;
+            const numero = document.getElementById("numero").value;
+            const saldo = document.getElementById("saldo").value;
+            const saldoEspecial = document.getElementById("saldoEspecial").value;
+
+            const contaCorrente = new Corrente(nome, banco, numero, saldo, saldoEspecial);
+            const resultado = `<strong>Conta Corrente:</strong> ${contaCorrente.mostrarDados()}`;
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+
+        // Função para criar uma conta poupança e mostrar os dados na tela
+        function criarContaPoupanca() {
+            const nome = document.getElementById("nome").value;
+            const banco = document.getElementById("banco").value;
+            const numero = document.getElementById("numero").value;
+            const saldo = document.getElementById("saldo").value;
+            const juros = document.getElementById("juros").value;
+            const dataVencimento = document.getElementById("dataVencimento").value;
+
+            const contaPoupanca = new Poupanca(nome, banco, numero, saldo, juros, dataVencimento);
+            const resultado = `<strong>Conta Poupança:</strong> ${contaPoupanca.mostrarDados()}`;
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+
+        // Função para limpar os campos do formulário
+        function limparCampos() {
+            document.getElementById("contaForm").reset();
+            document.getElementById("resultado").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

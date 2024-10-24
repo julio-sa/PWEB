@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformar Texto</title>
+</head>
+<body>
+    <h1>Transformar a Case</h1>
+
+    <label for="texto">Digite o texto:</label>
+    <input type="text" id="texto"><br><br>
+
+    <input type="radio" id="maiusculas" name="transformacao" onclick="transformarTexto('maiusculas')">
+    <label for="maiusculas">Transformar em letras maiúsculas</label><br>
+
+    <input type="radio" id="minusculas" name="transformacao" onclick="transformarTexto('minusculas')">
+    <label for="minusculas">Transformar em letras minúsculas</label><br><br>
+
+    <script>
+        function transformarTexto(opcao) {
+            const inputTexto = document.getElementById('texto');
+            if (opcao === 'maiusculas') {
+                inputTexto.value = inputTexto.value.toUpperCase();
+            } else if (opcao === 'minusculas') {
+                inputTexto.value = inputTexto.value.toLowerCase();
+            }
+        }
+    </script>
+</body>
+</html>

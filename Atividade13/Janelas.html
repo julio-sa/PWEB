@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abra a Janela</title>
+    <style>
+        img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="status">Janela Fechada</h1>
+    <img id="janela" src="janela_fechada.jpg" alt="Janela Fechada">
+
+    <script>
+        const imgJanela = document.getElementById('janela');
+        const statusJanela = document.getElementById('status');
+
+        // Função para abrir a janela (troca para imagem aberta e texto)
+        imgJanela.addEventListener('mouseover', () => {
+            imgJanela.src = 'janela_aberta.png';
+            statusJanela.textContent = 'Janela Aberta';
+        });
+
+        // Função para fechar a janela (troca para imagem fechada e texto)
+        imgJanela.addEventListener('mouseout', () => {
+            imgJanela.src = 'janela_fechada.png';
+            statusJanela.textContent = 'Janela Fechada';
+        });
+
+        // Função para quebrar a janela ao clicar
+        imgJanela.addEventListener('click', () => {
+            imgJanela.src = 'janela_quebrada.png';
+            statusJanela.textContent = 'Janela Quebrada';
+        });
+    </script>
+</body>
+</html>
