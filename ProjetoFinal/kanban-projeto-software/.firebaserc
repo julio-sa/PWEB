@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "kanban-software-developing",
+    "hosting": "kanban-software-developing"
+  },
+  "targets": {},
+  "etags": {}
+}

@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.task-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form select {
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.task-form input:focus,
+.task-form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.task-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.task-form button:hover {
+    background-color: #0056b3;
+}
+
+.kanban {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    background-color: #e9ecef;
+    padding: 10px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.column:hover {
+    background-color: #dfe4ea;
+}
+
+.column h2 {
+    text-align: center;
+    color: #495057;
+}
+
+.tasks {
+    min-height: 100px;
+}
+
+.task {
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
+
+.task.baixa {
+    background-color: #d4edda; /* Verde claro */
+    border: 1px solid #c3e6cb;
+}
+
+.task.media {
+    background-color: #007bff; /* Azul para prioridade média */
+    border: 1px solid #0056b3; /* Azul mais escuro */
+    color: white; /* Para o texto ficar visível */
+}
+
+.task.alta {
+    background-color: #f8d7da; /* Vermelho claro */
+    border: 1px solid #f5c6cb;
+}
+
+.task.due-soon {
+    border: 2px solid #dc3545; /* Vermelho para destaque */
+}
+
+.column .task.backlog {
+    border-left: 5px solid #007bff; /* Azul para backlog */
+}
+
+.column .task.development {
+    border-left: 5px solid #28a745; /* Verde para desenvolvimento */
+}
+
+.column .task.done {
+    border-left: 5px solid #6c757d; /* Cinza para concluído */
+}
+
+.task button {
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.task .edit-btn {
+    background-color: #ffc107; /* Amarelo */
+    color: white;
+}
+
+.task .edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.task .delete-btn {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+}
+
+.task .delete-btn:hover {
+    background-color: #c82333;
+}
